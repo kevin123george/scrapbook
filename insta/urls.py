@@ -30,5 +30,6 @@ urlpatterns = [
     path('home/scrap/create/', scrap.ScrapCreatView.as_view(), name='scrap-create'),
     path('userpost/', scrap.UserScrapListView.as_view(), name='user-post'),
     path('news/',info.index,name = "info"),
-    path('stock',info.stockpredic,name = 'stock')
+    path('stock',info.stockpredic,name = 'stock'),
+    path('',gatekeeper.home,name = "home")
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

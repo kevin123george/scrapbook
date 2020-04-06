@@ -22,3 +22,7 @@ def register(response):
         form = RegisterForm()
 
     return render(response, "registration/register.html", {"form": form})
+
+
+def home(request):
+    return render(request, 'home.html')
