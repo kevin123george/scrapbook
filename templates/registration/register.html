@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+{% block title %}Create an Account{% endblock %}
+
+
+{% block content %}
+    <form method="POST" class="form-group">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit" class="btn btn-success">Register</button>
+    </form>
+{% endblock %}
+</body>
+</html>
